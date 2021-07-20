@@ -1,0 +1,10 @@
+<div class="search-container">
+  <%= form_with url: search_flickr_path, method: :get, local: true do |form| %>
+    <%= form.text_field :user_id, placeholder: 'Flickr ID (e.g. 12345678@N09)', id: 'search_field' %>
+    <%= form.submit :Search, class: 'search_button' %>
+  <% end %>
+</div>
+
+
+<%= render partial: 'photos', locals: { photos: @photos } %>
+

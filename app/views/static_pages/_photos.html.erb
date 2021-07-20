@@ -1,0 +1,10 @@
+<% if photos %>
+  <div id="photos-container">
+    <% photos.each do |photo| %>
+      <%= tag.a href: Flickr.url_photopage(photo)  do %>
+        <%= image_tag Flickr.url(photo) %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+

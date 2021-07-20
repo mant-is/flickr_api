@@ -11,6 +11,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <a href="/">You Midsummer</a>
+    </header>
+
+    <% if notice %>
+      <p><%= notice %></p>
+    <% end %>
+    <div class='page-body'>
+      <%= yield %>
+    </div>
   </body>
 </html>

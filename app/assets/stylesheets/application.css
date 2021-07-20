@@ -1,15 +1,78 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-body {
+  padding: 0 7vw 0 7vw;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  box-sizing: border-box;
+  
+}
+
+.search-container {
+  display: flex;
+  margin: 0 0 2vh 0;
+}
+
+.search-container form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#search_field {
+  width: 50vw;
+  height: 5vh;
+}
+
+.search_button {
+  width: 20vw;
+  height: 5.75vh;
+  box-sizing: border-box;
+}
+
+#photos-container {
+  column-count: 3;
+  column-gap: 4px;
+  line-height: 0;
+}
+
+#photos-container img {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 2px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 10vw 0 10vw;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  #photos-container {
+    column-count: 2;
+  }
+
+  .page-body {
+    padding: 0 3vw 0 3vw;
+  }
+  .search-container {
+    justify-content: space-between;
+  }
+
+  .search_button {
+    width: 30vw;
+    box-sizing: border-box;
+  }
+}
+
+
